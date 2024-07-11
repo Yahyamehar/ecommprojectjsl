@@ -21,24 +21,37 @@
   width: 80%;
   max-width: 600px;
   padding: 20px;
-  background-color: rgba(109, 109, 109, 0.6);
   border-radius: 10px;
-}
-
-.cover-caption h1 {
-  font-size: 3rem; /* Larger font size for main heading */
-  margin-bottom: 20px;
-}
-
-.cover-caption p {
-  font-size: 1.5rem; /* Larger font size for paragraph */
-  line-height: 1.5; /* Improved readability with increased line height */
-  margin-bottom: 30px;
 }
 
 .cover-caption .btn {
   font-size: 1.5rem; /* Larger font size for button */
   padding: 12px 40px; /* Increased padding for button */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .cover-caption {
+    width: 90%;
+    padding: 10px;
+  }
+
+  .cover-caption .btn {
+    font-size: 1.2rem; /* Adjusted font size for smaller screens */
+    padding: 10px 30px; /* Adjusted padding for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .cover-caption {
+    width: 95%;
+    padding: 5px;
+  }
+
+  .cover-caption .btn {
+    font-size: 1rem; /* Further adjusted font size for very small screens */
+    padding: 8px 20px; /* Further adjusted padding for very small screens */
+  }
 }
 
 /* Gifts title styles */
