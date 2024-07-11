@@ -1,0 +1,270 @@
+/* Cover photo section styles */
+.cover-photo-container {
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 50px; /* Space between cover photo and product grid */
+}
+
+.cover-photo-img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.cover-caption {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  color: white;
+  width: 80%;
+  max-width: 600px;
+  padding: 20px;
+  background-color: rgba(109, 109, 109, 0.6);
+  border-radius: 10px;
+}
+
+.cover-caption h1 {
+  font-size: 3rem; /* Larger font size for main heading */
+  margin-bottom: 20px;
+}
+
+.cover-caption p {
+  font-size: 1.5rem; /* Larger font size for paragraph */
+  line-height: 1.5; /* Improved readability with increased line height */
+  margin-bottom: 30px;
+}
+
+.cover-caption .btn {
+  font-size: 1.5rem; /* Larger font size for button */
+  padding: 12px 40px; /* Increased padding for button */
+}
+
+/* Gifts title styles */
+.gifts-title {
+  text-align: center;
+  margin-bottom: 30px; /* Space between title and product grid */
+}
+
+.gifts-title h2 {
+  font-size: 2rem; /* Font size for title */
+  color: #333; /* Text color */
+  font-weight: bold; /* Bold font weight */
+}
+
+/* Product grid styles */
+.product-grid-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.product-item {
+  width: calc(25% - 20px); /* Adjust width of each product item */
+  margin-bottom: 30px; /* Space between product items */
+  text-align: center;
+  padding: 15px;
+  box-sizing: border-box;
+  border: 1px solid #eee; /* Add border for each product item */
+  border-radius: 10px; /* Rounded corners for product items */
+  transition: transform 0.3s ease-in-out; /* Smooth transition effect */
+}
+
+.product-item:hover {
+  transform: translateY(-10px); /* Lift up effect on hover */
+}
+
+.product-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.product-info {
+  margin-top: 15px; /* Increased margin top for product info */
+}
+
+.product-info h3 {
+  font-size: 1.5rem; /* Larger font size for product name */
+  margin-bottom: 10px;
+}
+
+.product-info p {
+  font-size: 1.2rem; /* Slightly larger font size for price */
+  color: #333;
+}
+
+.product-info .original-price {
+  text-decoration: line-through;
+  color: #999;
+}
+
+.product-info .discount-price {
+  color: #ff5733;
+  font-weight: bold;
+}
+
+/* Additional section styles */
+.additional-section {
+  display: flex;
+  flex-wrap: nowrap; /* No wrap to keep both divs side by side */
+  margin: 0 15px; /* Add left and right margin */
+}
+
+.left-div,
+.right-div {
+  flex: 1;
+  padding: 0; /* No padding between divs */
+}
+
+.left-div {
+  display: flex;
+  align-items: center; /* Center the image vertically */
+  justify-content: center; /* Center the image horizontally */
+}
+
+.product-photo {
+  max-width: 100%;
+  height: auto;
+  border-radius: 0; /* No border radius */
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.additional-section {
+  display: flex;
+  flex-wrap: nowrap; /* Ensure the two divs stay side by side */
+  justify-content: space-between; /* Space between the items */
+  width: 80%; /* Adjust overall width as needed */
+  margin: 0 auto; /* Center the container */
+  padding: 10px; /* Optional: adjust padding */
+  border: 1px solid #ccc; /* Optional: border for visual separation */
+  border-radius: 10px; /* Optional: rounded corners */
+  overflow: hidden; /* To ensure no content spills out */
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+.additional-section div {
+  flex: 1 1 45%; /* Adjust the flex basis and shrink/grow factors */
+  margin: 0 5px; /* Adjust margin between divs */
+  padding: 10px; /* Adjust padding within each div */
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+/* Optional: If you want to specifically target two divs */
+.additional-section div:first-child,
+.additional-section div:last-child {
+  flex: 1 1 45%; /* Adjust the flex basis and shrink/grow factors */
+}
+
+
+.left-div,
+.right-div {
+  flex: 1;
+  padding: 20px; /* Adjust padding as needed */
+}
+
+.left-div {
+  display: flex;
+  align-items: center; /* Center the image vertically */
+  justify-content: center; /* Center the image horizontally */
+}
+
+.product-photo {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px; /* Optional: rounded corners for the image */
+}
+
+.right-div {
+  background-color: #ECE6F5; /* Light purple background color */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.right-div h2 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  color: #333; /* Darker text color */
+}
+
+.right-div p {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  color: #666; /* Grey text color */
+}
+
+.right-div .btn {
+  font-size: 1.2rem;
+  padding: 10px 30px;
+  color: #000000;
+  border: black solid;
+  border-radius: 40px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.right-div .btn:hover {
+  background-color: #9ad007; /* Darker shade on hover */
+}
+/* Responsive styles */
+@media (max-width: 1200px) {
+  .product-item {
+    width: calc(33.33% - 20px); /* Adjust width for medium-sized screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .product-item {
+    width: calc(50% - 20px); /* Adjust width for smaller screens */
+    margin-bottom: 20px; /* Reduce space between product items */
+  }
+
+  .cover-caption {
+    padding: 15px; /* Adjust padding for cover caption on smaller screens */
+  }
+
+  .cover-caption h1 {
+    font-size: 2rem; /* Adjust font size for cover caption on smaller screens */
+    margin-bottom: 15px; /* Reduce margin bottom for cover caption on smaller screens */
+  }
+
+  .cover-caption p {
+    font-size: 1rem; /* Adjust font size for cover caption on smaller screens */
+    margin-bottom: 20px; /* Reduce margin bottom for cover caption on smaller screens */
+  }
+
+  .cover-caption .btn {
+    font-size: 1rem; /* Adjust font size for button on smaller screens */
+    padding: 8px 20px; /* Adjust padding for button on smaller screens */
+  }
+
+  .gifts-title h2 {
+    font-size: 1.5rem; /* Adjust font size for title on smaller screens */
+    margin-bottom: 15px; /* Reduce margin bottom for title on smaller screens */
+  }
+
+  .additional-section {
+    flex-direction: column; /* Stack the divs vertically on smaller screens */
+    margin: 0 20px; /* Adjust margins for smaller screens */
+  }
+
+  .right-div {
+    margin-top: 20px; /* Add space between stacked divs */
+  }
+
+  .left-div,
+  .right-div {
+    flex: none;
+    width: 100%;
+  }
+
+}

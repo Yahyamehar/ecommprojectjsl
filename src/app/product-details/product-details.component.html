@@ -1,0 +1,39 @@
+<div class="container">
+  <div class="row align-items-center">
+    <div class="col-md-6">
+      <img class="product-image img-fluid" [src]="products.image" [alt]="products.name" *ngIf="products" />
+    </div>
+    <div class="col-md-6">
+      <div class="product-detail-container" *ngIf="products">
+        <h2>{{ products.name }}</h2>
+        <div class="product-info">
+          <p class="price">Price: {{ products.price | currency : 'USD' : 'symbol' : '1.2-2' }}</p>
+          <p *ngIf="products.discountPrice" class="discount-price">Discount Price: {{ products.discountPrice | currency : 'USD' : 'symbol' : '1.2-2' }}</p>
+          <p class="category">Category: {{ products.category }}</p>
+          <p class="brand">Brand: {{ products.brand }}</p>
+          <p class="availability">Availability: {{ products.availability | availability }}</p>
+          <p class="rating">Rating: {{ products.rating }} ★</p>
+          <p class="color">Color: {{ products.color }}</p>
+        </div>
+        <div class="product-description">
+          <h3>Description</h3>
+          <p>{{ products.description }}</p>
+        </div>
+        <div class="product-sizes">
+          <h3>Sizes</h3>
+          <select class="form-select">
+            <option *ngFor="let size of products.sizes">{{ size }}</option>
+          </select>
+        </div>
+        <div class="product-reviews">
+          <h3>Reviews</h3>
+          <p *ngFor="let review of products.reviews">{{ review }}</p>
+        </div>
+        <button class="btn btn-primary add-to-cart"  (click)="addToCart()">Add to Cart</button>
+      </div>
+      <div class="product-not-found" *ngIf="!products">
+        <h1>Product not found!</h1>
+      </div>
+    </div>
+  </div>
+</div>

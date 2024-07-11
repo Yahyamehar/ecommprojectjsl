@@ -1,0 +1,31 @@
+.gallery-section {
+  text-align: center;
+  margin: 50px 0;
+}
+
+.gallery-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.gallery-item {
+  flex: 1 1 calc(20% - 10px); /* Five items per row */
+  box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.gallery-photo {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.gallery-item:hover .gallery-photo {
+  transform: scale(1.1);
+  filter: brightness(80%);
+}

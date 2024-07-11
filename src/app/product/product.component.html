@@ -1,0 +1,23 @@
+<div class="gifts-title">
+  <h2>Gifts up to $50</h2>
+</div>
+
+<div class="product-grid-container">
+  <div class="product-item" *ngFor="let product of products" (click)="navigateToProductDetail(product.id)">
+    <a routerLink="['/product', product.id]">
+      <img [src]="product.image" [alt]="product.name" />
+      <div class="product-info">
+        <h3>{{ product.name }}</h3>
+        <p class="original-price" *ngIf="product.discountPrice">
+          {{ product.price | currency : "USD" : "symbol" : "1.2-2" }}
+        </p>
+        <p class="discount-price" *ngIf="product.discountPrice">
+          {{ product.discountPrice | currency : "USD" : "symbol" : "1.2-2" }}
+        </p>
+        <p class="price" *ngIf="!product.discountPrice">
+          {{ product.price | currency : "USD" : "symbol" : "1.2-2" }}
+        </p>
+      </div>
+    </a>
+  </div>
+</div>

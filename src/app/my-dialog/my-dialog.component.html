@@ -1,0 +1,19 @@
+<h1 class="dialog-title">Item Added Successfully</h1>
+<div class="dialog-content">
+  <div class="product-image-container">
+    <img class="product-image" [src]="data.product.image" [alt]="data.product.name">
+  </div>
+  <div class="product-details">
+    <p><strong>Name:</strong> {{ data.product.name }}</p>
+    <p><strong>Price:</strong> {{ data.product.price | currency:'USD':'symbol':'1.2-2' }}</p>
+    <p><strong>Category:</strong> {{ data.product.category }}</p>
+    <p><strong>Brand:</strong> {{ data.product.brand }}</p>
+    <p><strong>Availability:</strong> {{ data.product.availability | availability }}</p>
+    <p><strong>Rating:</strong> {{ data.product.rating }} ★</p>
+    <p><strong>Color:</strong> {{ data.product.color }}</p>
+  </div>
+</div>
+<div class="dialog-actions">
+  <button class="close-button" (click)="onNoClick()">Continue Shopping</button>
+  <!-- Optionally add more action buttons -->
+</div>
