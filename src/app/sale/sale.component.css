@@ -1,61 +1,40 @@
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-    transform: translateY(-20px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
+/* picture.component.scss */
+
+.container {
+  text-align: center;
 }
 
-.top-banner {
-  background-color: #ffc107; /* Bootstrap warning color */
-  color: white;
-  padding: 10px 0;
-  animation: fadeIn 1s ease-in-out;
-}
-
-.top-banner a {
-  color: white;
+h1 {
+  font-size: 2.5rem;
+  color: #333;
+  font-style: italic;
   font-weight: bold;
-  text-decoration: none;
 }
 
-.top-banner a:hover {
-  text-decoration: underline;
+span {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 1.5rem;
+
 }
 
-.navbar-center {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.card {
+  border: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
 }
 
-.navbar-brand {
-  height: 60px; /* Adjust logo height as needed */
-  width: auto; /* Maintain aspect ratio */
+.card-img-top {
+    border-radius: 12px;
+
 }
 
-.navbar-center .navbar-nav {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  margin-top: 10px; /* Adjust spacing between logo and menu */
+.card-title {
+  font-size: 1.5rem;
+  font-weight: bold;
 }
 
-.navbar-center .nav-link {
-  margin: 0 15px; /* Adjust spacing between menu items */
-  color: #333; /* Adjust link color */
-}
-
-.navbar .d-flex {
-  margin-right: 15px; /* Adjust right margin of login button */
-}
-.navbar {
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  background-color: #ffffff; /* Adjust background color as needed */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for visual separation */
+.card-text {
+  font-size: 1rem;
+  color: #777;
 }
