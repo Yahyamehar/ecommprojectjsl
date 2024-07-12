@@ -1,0 +1,61 @@
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.top-banner {
+  background-color: #ffc107; /* Bootstrap warning color */
+  color: white;
+  padding: 10px 0;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.top-banner a {
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.top-banner a:hover {
+  text-decoration: underline;
+}
+
+.navbar-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.navbar-brand {
+  height: 60px; /* Adjust logo height as needed */
+  width: auto; /* Maintain aspect ratio */
+}
+
+.navbar-center .navbar-nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 10px; /* Adjust spacing between logo and menu */
+}
+
+.navbar-center .nav-link {
+  margin: 0 15px; /* Adjust spacing between menu items */
+  color: #333; /* Adjust link color */
+}
+
+.navbar .d-flex {
+  margin-right: 15px; /* Adjust right margin of login button */
+}
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: #ffffff; /* Adjust background color as needed */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for visual separation */
+}

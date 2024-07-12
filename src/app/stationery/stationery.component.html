@@ -1,0 +1,22 @@
+
+<div class="container mt-4 text-center">
+  <h1 class="mb-4">Stationery</h1>
+  <span class="d-block mb-4">
+    All the added photos were created in Canva, designed by Yahya.
+  </span>
+  <div class="row">
+    <div *ngFor="let pic of pictures" class="col-lg-3 col-md-4 col-sm-6 col-12 mb-4">
+      <div class="card">
+        <img
+          [src]="pic.img"
+          alt="{{ pic.name }}"
+          class="card-img-top img-fluid"
+        />
+        <div class="card-body">
+          <h5 class="card-title">{{ pic.name }}</h5>
+          <p class="card-text"><strong>Price:</strong> ${{ pic.price }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
